@@ -4,4 +4,10 @@ pipelines:
   default:
     - step:
         script:
-          - git push --mirror git@github.com:LuizMiyazaki/jenkins-test.git
+          - ssh -V
+    - step:
+        script:
+          - ls -lah ~/.ssh
+    - step:
+        script:
+          - ssh -T git@github.com
